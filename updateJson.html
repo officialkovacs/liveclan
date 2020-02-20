@@ -1,0 +1,39 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <title>Ninja Saga &middot; Live Clan Ranking</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!--===============================================================================================-->	
+     <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+ </head>
+ <body>
+ <h1 id="header1">0</h1>
+     
+ 
+ <!--===============================================================================================-->	
+     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+ 
+     <script>
+         var i = 0;
+         function getRank(){
+          var objXMLHttpRequest = new XMLHttpRequest();
+          objXMLHttpRequest.onreadystatechange = function() {
+            if(objXMLHttpRequest.readyState === 4) {
+              if(objXMLHttpRequest.status === 200) {
+                i++;
+                $("#header1").html(i);
+                getRank();
+              }
+            }
+          }
+          objXMLHttpRequest.open('GET', 'php/clan.php?data=' + Math.random().toString(36).substring(7), true);
+          objXMLHttpRequest.send(null);
+        }
+  
+        getRank();
+      </script>
+ 
+ </body>
+ </html>
