@@ -24,8 +24,8 @@
               if(objXMLHttpRequest.status === 200) {
                 i++;
                 $("#header1").html(i);
-                getRank();
               }
+              getRank();
             }
           }
           objXMLHttpRequest.open('GET', 'php/clan.php?data=' + Math.random().toString(36).substring(7), true);
