@@ -14,4 +14,4 @@
 
 ### Useful Links
   1. **[Instagram](https://www.instagram.com/_.robert.kovacs._/)**
-  1. **[My Website](https://robyteachesyou.com)**
+  1. **[My Website](https://ninjasagashop.com)**
